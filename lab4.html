@@ -56,10 +56,149 @@
             position: fixed;
             width: 98%;
             bottom: 0;
+            z-index: 9;
         }
 
         .pusto {
             height: 50px;
+        }
+
+        .comics {
+            position: relative;
+            text-align: center;
+            z-index: 4;
+        }
+
+        .obl1 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 20px/10px;
+            width: 40px;
+            height: 20px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 5;
+            left: 550px;
+            top: 170px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .obl2 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 30px/15px;
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 6;
+            left: 480px;
+            top: 150px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .obl3 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 40px/20px;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 7;
+            left: 410px;
+            top: 120px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .obl4 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 50px/25px;
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 8;
+            left: 340px;
+            top: 85px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+
+        .obl11 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 20px/10px;
+            width: 40px;
+            height: 20px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 5;
+            right: 500px;
+            top: 170px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .obl22 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 30px/15px;
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 6;
+            right: 430px;
+            top: 150px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .obl33 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 40px/20px;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 7;
+            right: 360px;
+            top: 120px;
+            box-shadow: 5px 5px 7px blueviolet;
+           `opacity: 0;
+        }
+        
+        .obl44 {
+            border: 2px dotted rgb(75, 75, 132);
+            border-radius: 60px/30px;
+            width: 120px;
+            height: 60px;
+            position: absolute;
+            background: linear-gradient(rgb(161, 161, 236), rgb(203, 146, 241));
+            z-index: 8;
+            right: 290px;
+            top: 70px;
+            box-shadow: 5px 5px 7px blueviolet;
+            `opacity: 0;
+        }
+        
+        .text {
+            color: rgb(27, 9, 61);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .text1 {
+            color: rgb(27, 9, 61);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .oblachka {
+            opacity: 0;
+        }
+
+        .comics:hover .oblachka {
+            opacity: 1;
         }
     </style>
 </head>
@@ -88,9 +227,7 @@
         таинственности и присыпали полезные знания нафталином. Я хочу рассказать, как всё обстоит на самом деле. У меня есть чит-коды.
     </div>
 
-    <div class="pusto">
-
-    </div>
+    <div class="pusto"></div>
 </aside>
 
     <main>
@@ -122,6 +259,25 @@
         </div>
     </main>
 
+    <div class="comics">
+        <img src="comics.jpg" height="500">
+        <div class="oblachka">
+            <div class="obl1"></div>
+            <div class="obl2"></div>
+            <div class="obl3"></div>
+            <div class="obl4">
+                <div class="text">Вау!</div>
+            </div>
+            <div class="obl11"></div>
+            <div class="obl22"></div>
+            <div class="obl33"></div>
+            <div class="obl44">
+                <div class="text1">Мы никогда так не умели!</div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="pusto"></div>
     <footer>
         &copy; Бабинова Софья, ФБИ-14, 2 курс, 2023
     </footer>
