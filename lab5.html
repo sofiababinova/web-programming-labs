@@ -14,7 +14,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a + b;
-            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+            ('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
 
         function showRazn() {
@@ -62,6 +62,23 @@
             output.style.borderWidth = '5px';
             output.style.textAlign = 'center';
         }
+
+        function showZena() {
+            let inputF = document.getElementById('numberF')
+            let inputG = document.getElementById('numberG')
+            let inputC = document.getElementById('numberC')
+            let inputD = document.getElementById('numberD')
+            let inputE = document.getElementById('numberE')
+
+            let f = parseInt(inputF.value) * 100;
+            let g = parseInt(inputG.value) * 80;
+            let c = parseInt(inputC.value) * 150;
+            let d = parseInt(inputD.value) * 300;
+            let e = parseInt(inputE.value) * 120;
+            let result = f + g + c + d + e;
+            let mes = 'Общая цена: ' + result + ' р';
+            document.getElementById('zena').innerHTML = mes;
+        }
     </script>
     <style>
         .message {
@@ -81,6 +98,40 @@
             width: 300px;
             height: 40px;
         }
+
+        .korzina {
+            border: 2px solid rgb(129, 33, 33);
+            border-radius: 20px;
+            width: 300px;
+            height: 380px;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        .pusto {
+            height: 20px;
+        }
+
+        .message1 {
+            width: 120px;
+            height: 20px;
+            background-color: rgb(152, 155, 155);
+            border: 2px solid rgb(129, 33, 33);
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .name {
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        .pusto1 {
+            height: 10px;
+        }
     </style>
 </head>
 <body>
@@ -91,11 +142,16 @@
     <main>
         <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+
+        <div class="pusto"></div>
+
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
         <div class="message" onclick="showRazn()">Найти разность чисел</div>
         <div class="message" onclick="showProizv()">Найти произведение чисел</div>
         <div class="message" onclick="showDel()">Найти деление чисел</div>
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+
+        <div class="pusto"></div>
 
         <div>
             <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'blue')">
@@ -105,6 +161,30 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="pusto"></div>
+
+        <div class="korzina">
+            <div class="name">Корзина товаров</div>
+
+            <div class="pusto"></div>
+
+            <label>Яблоки (100р/шт): <br><input type="number" value="1" id="numberF"></label><br>
+            <div class="pusto1"></div>
+            <label>Груши (80р/шт): <br><input type="number" value="1" id="numberG"></label><br>
+            <div class="pusto1"></div>
+            <label>Апельсины (150р/шт): <br><input type="number" value="1" id="numberC"></label><br>
+            <div class="pusto1"></div>
+            <label>Дыни (300р/шт): <br><input type="number" value="1" id="numberD"></label><br>
+            <div class="pusto1"></div>
+            <label>Персики (120р/шт): <br><input type="number" value="1" id="numberE"></label><br>
+
+            <div class="pusto"></div>
+
+            <div class="message1" onclick="showZena()">Расчитать</div>
+            <div class="pusto1"></div>
+            <div id="zena"></div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
