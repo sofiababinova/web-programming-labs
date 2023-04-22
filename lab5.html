@@ -14,7 +14,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a + b;
-            ('Сумма ' + a + ' и ' + b + ' равна ' + result);
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
 
         function showRazn() {
@@ -34,7 +34,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a * b;
-            alert('Произведение ' + a + ' и ' + b + ' равна ' + result);
+            alert('Произведение ' + a + ' и ' + b + ' равно ' + result);
         }
 
         function showDel() {
@@ -44,7 +44,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a / b;
-            alert('Деление ' + a + ' и ' + b + ' равна ' + result);
+            alert('Деление ' + a + ' на ' + b + ' равно ' + result);
         }
 
         function showAuthor() {
@@ -78,6 +78,10 @@
             let result = f + g + c + d + e;
             let mes = 'Общая цена: ' + result + ' р';
             document.getElementById('zena').innerHTML = mes;
+        }
+
+        function skrt(clicked_id) {
+            document.getElementById(clicked_id).style.display = 'none';
         }
     </script>
     <style>
@@ -132,6 +136,160 @@
         .pusto1 {
             height: 10px;
         }
+
+        .k1 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(232, 84, 84), rgb(231, 142, 86));
+            left: 50px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k2 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(86, 86, 241), rgb(129, 22, 201));
+            left: 150px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k3 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(231, 185, 58), rgb(208, 231, 54));
+            left: 250px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k4 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(173, 226, 58), rgb(61, 234, 58));
+            left: 350px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k5 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(63, 238, 209), rgb(66, 150, 240));
+            left: 450px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k6 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(228, 51, 201), rgb(247, 53, 95));
+            left: 550px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k7 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(237, 29, 29), rgb(101, 5, 5));
+            left: 650px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k8 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(11, 62, 69), rgb(58, 223, 72));
+            left: 750px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k9 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(246, 253, 42), rgb(250, 58, 244));
+            left: 850px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .k10 {
+            border: 2px solid rgb(7, 7, 58);
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: linear-gradient(rgb(7, 232, 116), rgb(13, 21, 246));
+            left: 950px;
+            top: 750px;
+            box-shadow: 5px 5px 7px rgb(54, 48, 60);
+            cursor: pointer;
+        }
+
+        .text {
+            color: rgb(27, 9, 61);
+            text-align: center;
+            padding: 12px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .text1 {
+            color: rgb(27, 9, 61);
+            text-align: center;
+            padding: 10px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .pusto2 {
+            height: 150px;
+        }
+
+        k.k1:active {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -185,6 +343,19 @@
             <div class="pusto1"></div>
             <div id="zena"></div>
         </div>
+
+        <div class="k1" id="skrzt1" onclick="skrt(this.id)"><div class="text">1</div></div>
+        <div class="k2" id="skrzt2" onclick="skrt(this.id)"><div class="text">2</div></div>
+        <div class="k3" id="skrzt3" onclick="skrt(this.id)"><div class="text">3</div></div>
+        <div class="k4" id="skrzt4" onclick="skrt(this.id)"><div class="text">4</div></div>
+        <div class="k5" id="skrzt5" onclick="skrt(this.id)"><div class="text">5</div></div>
+        <div class="k6" id="skrzt6" onclick="skrt(this.id)"><div class="text">6</div></div>
+        <div class="k7" id="skrzt7" onclick="skrt(this.id)"><div class="text">7</div></div>
+        <div class="k8" id="skrzt8" onclick="skrt(this.id)"><div class="text">8</div></div>
+        <div class="k9" id="skrzt9" onclick="skrt(this.id)"><div class="text">9</div></div>
+        <div class="k10" id="skrzt10" onclick="skrt(this.id)"><div class="text1">10</div></div>
+
+        <div class="pusto2"></div>
     </main>
 
     <footer onclick="showAuthor()">
