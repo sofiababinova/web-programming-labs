@@ -54,6 +54,18 @@
             document.getElementById('result').innerHTML = "";
 
         }
+
+        function PPravila() {
+            let screens = document.getElementsByClassName('pravila');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+
+        function SPravila() {
+            let screens = document.getElementsByClassName('pravila');
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+        }
     </script>
     <style>
         .game {
@@ -62,6 +74,14 @@
             margin: 30px auto;
             border-radius: 20px;
             text-align: center;
+            padding: 8px;
+        }
+
+        .pravila {
+            width: 700px;
+            background-color: white;
+            margin: 30px auto;
+            border-radius: 20px;
             padding: 8px;
         }
     </style>
@@ -98,6 +118,27 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
+            </div>
+        </div>
+
+        <div class="pravila">
+            <button onclick="PPravila()">
+                Показать правила игры
+            </button>
+        </div>
+
+        <div class="pravila" style="display: none;">
+            <div>
+                <button onclick="SPravila()">Скрыть правила игры</button>
+            </div>
+            <div>
+                <ol>
+                    <li>Чтобы начать игру, нажмите кнопку "Сыграть в игру".</li>
+                    <li>Далее впишите число от 1 до 100, которые вы думаете, что загадал компьютер.</li>
+                    <li>После нажмите кнопку "Угадать".</li>
+                    <li>Нельзя вводить числа меньше "1" и больше "100", так же если число слишком мальнькое или слишком большое игра напишет вам об этом.</li>
+                    <li>Чтобы сыграть еще раз, нажмите кнопку "Сыграть еще раз".</li>
+                </ol>
             </div>
         </div>
     </main>
