@@ -93,6 +93,17 @@
                 document.getElementById('color-name').innerHTML = 'жёлтый';
             }
         }
+
+        function Dvig(div) {
+            if (div.style.left == '0px') {
+                div.style.left = '1300px';
+                div.style.transform = 'rotate(4turn)';
+            }
+            else {
+                div.style.left = '0px';
+                div.style.transform = 'rotate(0)';
+            }
+        }
     </script>
     <style>
         .game {
@@ -123,6 +134,21 @@
             color: rgb(255, 255, 255);
             font-weight: bolder;
             cursor: pointer;
+        }
+
+        .dvig {
+            width: 150px;
+            text-align: center;
+            background-color: lightcoral;
+            color: antiquewhite;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 20px;
+            margin: 30px 0px 30px 0px;
+            position: relative;
+            left: 0px;
+            transition: 2s;
         }
     </style>
 </head>
@@ -185,6 +211,10 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name">жёлтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+
+        <div class="dvig" onclick="Dvig(this)">
+            Щёлкни меня
         </div>
     </main>
 
