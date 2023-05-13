@@ -118,6 +118,49 @@
                 n1.style.width = width + 50 + 'px';
             }
         }
+
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if (color == 'Красный' && type == 'Футболка') {
+                wear.src = 'red-f.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Красный' && type == 'Поло') {
+                wear.src = 'red-p.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Красный' && type == 'Майка') {
+                wear.src = 'red-m.jpeg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Чёрный' && type == 'Футболка') {
+                wear.src = 'black-f.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Чёрный' && type == 'Поло') {
+                wear.src = 'black-p.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Чёрный' && type == 'Майка') {
+                wear.src = 'black-m.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Белый' && type == 'Футболка') {
+                wear.src = 'white-f.jpeg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Белый' && type == 'Поло') {
+                wear.src = 'white-p.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+            else if (color == 'Белый' && type == 'Майка') {
+                wear.src = 'white-m.jpg';
+                document.getElementById('wear').src = wear.src;
+            }
+        }
     </script>
     <style>
         .game {
@@ -247,6 +290,26 @@
 
         <div id="rash" onclick="Rash()">
             Щёлкни меня 2.0
+        </div>
+
+        <div>
+            Цвет ожежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">ОК</button><br>
+
+            <img id="wear">
         </div>
     </main>
 
