@@ -77,6 +77,16 @@
                 krugi -= 1;
             }
         }
+
+        function table() {
+            let ty = document.getElementById('ty');
+            for (let i = 12; i < 33; i++) {
+                let tbym = document.createElement('div');
+                tbym.innerHTML = (i+1) + ' * ' +  '31 ' + '= ' + (i + 1) * 31;
+
+                ty.appendChild(tbym);
+            }
+        }
     </script>
 </head>
 <body>
@@ -98,6 +108,9 @@
         <label><input placeholder='Введите число кругов' type="number" value="5" id="polevv"></label><br>
         <button onclick="kz()">Красное/зелёное</button>
         <div id="KZ"></div>
+
+        <button onclick="table()">Таблица умножения на 31</button>
+        <div id="ty"></div>
     </main>
 
     <footer>
