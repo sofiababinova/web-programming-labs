@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бабинова Софья Евгеньевна. Лабораторная 6</title>
+    <title>Бабинова Софья Евгеньевна. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        #KZ{
+            display: grid;
+            /* Автоматически заполняем на всю ширину grid-контейнера */
+            grid-template-columns: repeat(auto-fill, 50px);
+        }
+    </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
@@ -47,6 +54,29 @@
                 pblocks.appendChild(pblock);
             }
         }
+
+        function kz() {
+            let KZ = document.getElementById('KZ');
+            let krugi = parseInt(document.getElementById('polevv').value);
+            for(let i = krugi - 1; i >= 0; i = i - 1) {
+                let krug = document.createElement('div');
+                krug.innerHTML = krugi;
+                if (krugi % 2 != 0)
+                {
+                    krug.style.border = "2px solid red";
+                }
+                else
+                {
+                    krug.style.border = "2px solid green";
+                }
+                krug.style.borderRadius = "30px";
+                krug.style.width = "20px";
+                krug.style.margin = "5px";
+                krug.style.padding = "10px";
+                KZ.appendChild(krug);
+                krugi -= 1;
+            }
+        }
     </script>
 </head>
 <body>
@@ -64,6 +94,10 @@
 
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
+
+        <label><input placeholder='Введите число кругов' type="number" value="5" id="polevv"></label><br>
+        <button onclick="kz()">Красное/зелёное</button>
+        <div id="KZ"></div>
     </main>
 
     <footer>
