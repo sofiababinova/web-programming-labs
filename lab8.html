@@ -7,6 +7,38 @@
     <title>Бабинова Софья Евгеньевна. Лабораторная 8</title>
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
+    <style>
+        #KBD {
+            font-weight: bold;
+            text-shadow: 3px 3px 5px grey;
+        }
+
+        .butt {
+            background-color:#93ef79;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px #6fee4b;
+            width: 200px;
+            height: 30px;
+            font-weight: bold;
+        }
+
+        .pusto {
+            height: 10px;
+        }
+
+        .d {
+            border-radius: 10px;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            background-color: #aae899;
+            border: #6fee4b;
+            box-shadow: 2px 2px 2px #6fee4b;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body onload="showDate()">
     <header>
@@ -19,6 +51,20 @@
         <div id="current-date2"></div>
         <div id="current-date3"></div>
         <div id="current-date4"></div>
+        <br>
+        <div>
+            <label>Дата рождения: <input type="date" class="d"></label>
+        </div>
+        <div class="pusto"></div>
+        <div>
+            <button onclick="showDateCount()" class='butt'>Показать число дней</button>
+        </div>
+        <div class="pusto"></div>
+        <div id="KBD"></div>
+        <div class="pusto"></div>
+        <div>
+            <button onclick="Del()" class='butt'>Отчистить</button>
+        </div>
     </main>
 
     <footer>

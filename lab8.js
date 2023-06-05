@@ -19,3 +19,21 @@ function showDate() {
     let today4 = new Date();
     out4.innerHTML = 'Дата и время для локали Филиппин: ' +   today4.toLocaleString('tl-PH');
 }
+
+function showDateCount() {
+    var Days;
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = 'Количество дней с даты рождения: ' + Math.floor((today - birthday)/1000/60/60/24);
+    document.getElementById('KBD').innerHTML = daysCount;
+}
+
+function Del() {
+    var Days;
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    document.getElementById('KBD').innerHTML = '';
+}
+
